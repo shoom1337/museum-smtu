@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экспозиция | Музей СПбГМТУ</title>
+  <meta name="description" content="Залы экспозиции музея СПбГМТУ: история кораблестроения, подводное оборудование, годы войны, кабинет профессора, дипломный зал.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-4">
+          <span><i class="bi bi-clock"></i>Пн–Пт: 10:00–17:00, Сб: 11:00–15:00</span>
+          <span><i class="bi bi-geo-alt"></i>г. Санкт-Петербург, ул. Лоцманская, 3</span>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="tel:+78121234567"><i class="bi bi-telephone"></i>+7 (812) 123-45-67</a>
+          <a href="mailto:museum@smtu.ru"><i class="bi bi-envelope"></i>museum@smtu.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-logo">⚓</div>
+        <div class="brand-text">
+          <span class="brand-name">Музей СПбГМТУ</span>
+          <span class="brand-sub">История кораблестроения</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">О музее</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html#history">История музея</a></li>
+              <li><a class="dropdown-item" href="about.html#documents">Нормативные документы</a></li>
+              <li><a class="dropdown-item" href="about.html#administration">Администрация</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="visitors.html" data-bs-toggle="dropdown">Посетителям</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="visit-rules.html">Правила посещения</a></li>
+              <li><a class="dropdown-item" href="visitors.html#tour">Виртуальный тур</a></li>
+              <li><a class="dropdown-item" href="visitors.html#lectures">Лекторий</a></li>
+              <li><a class="dropdown-item" href="visitors.html#services">Дополнительные услуги</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="exposition.html" data-bs-toggle="dropdown">Экспозиция</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#shipbuilding">История кораблестроения</a></li>
+              <li><a class="dropdown-item" href="lki-history.html">История создания ЛКИ</a></li>
+              <li><a class="dropdown-item" href="#underwater">Подводное оборудование</a></li>
+              <li><a class="dropdown-item" href="#war">Годы войны</a></li>
+              <li><a class="dropdown-item" href="#office">Кабинет профессора</a></li>
+              <li><a class="dropdown-item" href="#diploma">Дипломный зал</a></li>
+              <li><a class="dropdown-item" href="graduates.html">Выдающиеся выпускники</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="graduates.html">Выпускники</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Фотогалерея</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Экспозиция</h1>
+    <p>Семь тематических залов, рассказывающих о великой истории российского кораблестроения</p>
+  </div>
+</section>
+<div class="breadcrumb-wrap">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active">Экспозиция</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Навигация по залам -->
+<div class="bg-light-museum border-bottom py-2">
+  <div class="container">
+    <div class="d-flex gap-2 overflow-auto py-1" style="white-space:nowrap;">
+      <a href="#shipbuilding" class="btn-navy" style="font-size:13px;padding:6px 14px;">История кораблестроения</a>
+      <a href="lki-history.html" class="btn-navy" style="font-size:13px;padding:6px 14px;">История ЛКИ</a>
+      <a href="#underwater" class="btn-navy" style="font-size:13px;padding:6px 14px;">Подводное оборудование</a>
+      <a href="#war" class="btn-navy" style="font-size:13px;padding:6px 14px;">Годы войны</a>
+      <a href="#office" class="btn-navy" style="font-size:13px;padding:6px 14px;">Кабинет профессора</a>
+      <a href="#diploma" class="btn-navy" style="font-size:13px;padding:6px 14px;">Дипломный зал</a>
+      <a href="graduates.html" class="btn-navy" style="font-size:13px;padding:6px 14px;">Выдающиеся выпускники</a>
+    </div>
+  </div>
+</div>
+
+<!-- Зал 1: История кораблестроения -->
+<section class="section-py anchor-offset" id="shipbuilding">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Зал I</span>
+        <h2 class="section-title">История кораблестроения</h2>
+        <div class="section-divider"></div>
+        <p>Зал открывает экспозицию музея, охватывая более трёх столетий истории отечественного кораблестроения — от петровских верфей XVIII века до современных атомных ледоколов.</p>
+        <p>В центре экспозиции — уникальная коллекция корабельных моделей, выполненных с ювелирной точностью: линейные корабли петровской эпохи, парусные фрегаты, первые паровые суда, броненосцы и современные военные корабли.</p>
+        <p>Отдельную часть зала занимают навигационные инструменты, чертёжные приборы и архивные документы — свидетели рождения российской инженерной школы кораблестроения.</p>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(255,255,255,0.15);">⚓</div>
+          <div style="background:linear-gradient(135deg,var(--navy-mid),#2d4a7a);border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(255,255,255,0.15);">🚢</div>
+          <div style="background:linear-gradient(135deg,#1a3060,var(--navy));border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(255,255,255,0.15);">🧭</div>
+          <div style="background:linear-gradient(135deg,var(--navy),#0f2240);border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(255,255,255,0.15);">⛵</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Зал 2: Подводное оборудование -->
+<section class="section-py bg-light-museum anchor-offset" id="underwater">
+  <div class="container">
+    <div class="row g-5 align-items-center flex-lg-row-reverse">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Зал II</span>
+        <h2 class="section-title">Подводное оборудование</h2>
+        <div class="section-divider"></div>
+        <p>Экспозиция посвящена развитию подводного кораблестроения и подводных технологий. Здесь представлены макеты подводных лодок, водолазное снаряжение, гидроакустические приборы и системы жизнеобеспечения.</p>
+        <p>Особую ценность представляет коллекция оборудования для работы на глубине: водолазные шлемы начала XX века, глубоководные скафандры, исследовательские аппараты.</p>
+        <p>Раздел «Подводная война» рассказывает о роли подводных лодок в военных конфликтах XX века и вкладе выпускников ЛКИ в развитие подводного флота СССР.</p>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div style="background:linear-gradient(135deg,#0a1a3a,#1B2A4A);border-radius:12px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;color:rgba(255,255,255,0.08);">🤿</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Зал 3: Годы войны -->
+<section class="section-py anchor-offset" id="war">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Зал III</span>
+        <h2 class="section-title">Годы войны</h2>
+        <div class="section-divider"></div>
+        <p>Зал рассказывает о судьбе Ленинградского кораблестроительного института и его преподавателей, студентов и выпускников в годы Великой Отечественной войны 1941–1945 годов.</p>
+        <p>Институт был эвакуирован в Пуховичи, а впоследствии в Николаев. Несмотря на военное время, учебный процесс не прекращался. Многие преподаватели и студенты ушли на фронт и в народное ополчение.</p>
+        <p>Выпускники ЛКИ внесли неоценимый вклад в создание боевых кораблей, ремонт повреждённых судов и разработку новых военно-морских технологий. В зале собраны личные вещи, письма, фотографии и документы военного времени.</p>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div style="background:linear-gradient(135deg,#1c1a2e,#1B2A4A);border-radius:12px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;color:rgba(255,255,255,0.08);">🛡️</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Зал 4: Кабинет профессора -->
+<section class="section-py bg-light-museum anchor-offset" id="office">
+  <div class="container">
+    <div class="row g-5 align-items-center flex-lg-row-reverse">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Зал IV</span>
+        <h2 class="section-title">Кабинет профессора</h2>
+        <div class="section-divider"></div>
+        <p>Реконструкция рабочего кабинета профессора Ленинградского кораблестроительного института начала XX века. Здесь воссоздана атмосфера учёного, посвятившего жизнь науке кораблестроения.</p>
+        <p>В экспозиции — письменный стол, рабочие инструменты, чертёжные принадлежности, научные монографии и личная переписка. Каждый предмет рассказывает об эпохе и о людях, создавших российскую инженерную школу.</p>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div style="background:linear-gradient(135deg,#2a1a0d,#1B2A4A);border-radius:12px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;color:rgba(255,255,255,0.08);">📚</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Зал 5: Дипломный зал -->
+<section class="section-py anchor-offset" id="diploma">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Зал V</span>
+        <h2 class="section-title">Дипломный зал</h2>
+        <div class="section-divider"></div>
+        <p>В дипломном зале собраны лучшие дипломные проекты выпускников СПбГМТУ за весь период существования университета. Это уникальная летопись инженерной мысли — от классических судостроительных проектов до передовых разработок в области морских технологий.</p>
+        <p>Экспозиция включает модели спроектированных судов, чертежи, пояснительные записки и фотографии авторов. Многие из представленных проектов были реализованы в металле и составили основу советского и российского флота.</p>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="info-block">
+              <h5>Более 500 дипломных проектов</h5>
+              <p>Лучшие работы выпускников с 1930 по 2024 год</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="info-block">
+              <h5>Военные корабли</h5>
+              <p>Проекты эсминцев, крейсеров, подводных лодок</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="info-block">
+              <h5>Гражданские суда</h5>
+              <p>Ледоколы, танкеры, научные экспедиционные суда</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section section-py">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Онлайн</span>
+        <h2 class="section-title section-title-white mb-3">Виртуальный тур по залам</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:28px;">Посетите все залы экспозиции онлайн — в любое удобное время</p>
+        <a href="visitors.html#tour" class="btn-museum"><i class="bi bi-play-circle"></i> Начать виртуальный тур</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <div class="brand-logo">⚓</div>
+          <p>Музей истории кораблестроения и мореплавания Санкт-Петербургского государственного морского технического университета</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <p class="footer-title">О музее</p>
+        <ul class="footer-links">
+          <li><a href="about.html#history"><i class="bi bi-chevron-right"></i>История музея</a></li>
+          <li><a href="about.html#documents"><i class="bi bi-chevron-right"></i>Документы</a></li>
+          <li><a href="about.html#administration"><i class="bi bi-chevron-right"></i>Администрация</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <p class="footer-title">Разделы</p>
+        <ul class="footer-links">
+          <li><a href="exposition.html"><i class="bi bi-chevron-right"></i>Экспозиция</a></li>
+          <li><a href="graduates.html"><i class="bi bi-chevron-right"></i>Выпускники</a></li>
+          <li><a href="gallery.html"><i class="bi bi-chevron-right"></i>Фотогалерея</a></li>
+          <li><a href="visitors.html"><i class="bi bi-chevron-right"></i>Посетителям</a></li>
+          <li><a href="contacts.html"><i class="bi bi-chevron-right"></i>Контакты</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <p class="footer-title">Контакты</p>
+        <div class="footer-contacts">
+          <p><i class="bi bi-geo-alt-fill"></i>190121, г. Санкт-Петербург,<br>ул. Лоцманская, д. 3</p>
+          <p><i class="bi bi-telephone-fill"></i><a href="tel:+78121234567">+7 (812) 123-45-67</a></p>
+          <p><i class="bi bi-envelope-fill"></i><a href="mailto:museum@smtu.ru">museum@smtu.ru</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span>© 2024 Музей СПбГМТУ. Все права защищены.</span>
+        <div class="d-flex gap-3">
+          <a href="text-page.html#privacy">Политика конфиденциальности</a>
+          <a href="text-page.html#agreement">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

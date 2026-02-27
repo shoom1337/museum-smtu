@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выдающиеся выпускники | Музей СПбГМТУ</title>
+  <meta name="description" content="Выдающиеся выпускники СПбГМТУ — инженеры, конструкторы, адмиралы, учёные. Поиск по Ф.И.О. и году выпуска.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-4">
+          <span><i class="bi bi-clock"></i>Пн–Пт: 10:00–17:00, Сб: 11:00–15:00</span>
+          <span><i class="bi bi-geo-alt"></i>г. Санкт-Петербург, ул. Лоцманская, 3</span>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="tel:+78121234567"><i class="bi bi-telephone"></i>+7 (812) 123-45-67</a>
+          <a href="mailto:museum@smtu.ru"><i class="bi bi-envelope"></i>museum@smtu.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-logo">⚓</div>
+        <div class="brand-text">
+          <span class="brand-name">Музей СПбГМТУ</span>
+          <span class="brand-sub">История кораблестроения</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">О музее</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html#history">История музея</a></li>
+              <li><a class="dropdown-item" href="about.html#documents">Нормативные документы</a></li>
+              <li><a class="dropdown-item" href="about.html#administration">Администрация</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="visitors.html" data-bs-toggle="dropdown">Посетителям</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="visit-rules.html">Правила посещения</a></li>
+              <li><a class="dropdown-item" href="visitors.html#tour">Виртуальный тур</a></li>
+              <li><a class="dropdown-item" href="visitors.html#lectures">Лекторий</a></li>
+              <li><a class="dropdown-item" href="visitors.html#services">Дополнительные услуги</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="exposition.html" data-bs-toggle="dropdown">Экспозиция</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="exposition.html#shipbuilding">История кораблестроения</a></li>
+              <li><a class="dropdown-item" href="lki-history.html">История создания ЛКИ</a></li>
+              <li><a class="dropdown-item" href="exposition.html#underwater">Подводное оборудование</a></li>
+              <li><a class="dropdown-item" href="exposition.html#war">Годы войны</a></li>
+              <li><a class="dropdown-item" href="exposition.html#office">Кабинет профессора</a></li>
+              <li><a class="dropdown-item" href="exposition.html#diploma">Дипломный зал</a></li>
+              <li><a class="dropdown-item" href="graduates.html">Выдающиеся выпускники</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="graduates.html">Выпускники</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Фотогалерея</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Выдающиеся выпускники</h1>
+    <p>Инженеры, конструкторы, адмиралы и учёные, прославившие отечественное кораблестроение</p>
+  </div>
+</section>
+<div class="breadcrumb-wrap">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active">Выдающиеся выпускники</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section class="section-py">
+  <div class="container">
+
+    <!-- Фильтры и поиск -->
+    <div class="graduates-filters fade-in">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-5">
+          <label class="form-label fw-600" style="font-size:13px;">Поиск по Ф.И.О.</label>
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-search" style="color:var(--gold)"></i></span>
+            <input type="text" class="form-control border-start-0" id="graduateSearch" placeholder="Введите фамилию, имя или отчество...">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label fw-600" style="font-size:13px;">Найдено записей</label>
+          <div class="form-control bg-light-museum" style="font-weight:700;color:var(--navy);">
+            <i class="bi bi-people me-2" style="color:var(--gold)"></i>
+            <span id="graduatesCount">12</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <button onclick="document.getElementById('graduateSearch').value=''; document.querySelectorAll('.year-tab').forEach(t=>t.classList.remove('active')); document.querySelector('[data-year=all]').classList.add('active'); document.querySelectorAll('.graduate-card').forEach(c=>c.style.display=''); document.getElementById('graduatesCount').textContent=document.querySelectorAll('.graduate-card').length;" class="btn-navy w-100">
+            <i class="bi bi-x-circle me-1"></i> Сбросить
+          </button>
+        </div>
+      </div>
+
+      <!-- Фильтр по десятилетиям -->
+      <div class="mt-3">
+        <label class="form-label fw-600 d-block mb-2" style="font-size:13px;">Период выпуска</label>
+        <div class="d-flex year-tabs">
+          <div class="year-tab active" data-year="all">Все годы</div>
+          <div class="year-tab" data-year="1930">1930–1939</div>
+          <div class="year-tab" data-year="1940">1940–1949</div>
+          <div class="year-tab" data-year="1950">1950–1959</div>
+          <div class="year-tab" data-year="1960">1960–1969</div>
+          <div class="year-tab" data-year="1970">1970–1979</div>
+          <div class="year-tab" data-year="1980">1980–1989</div>
+          <div class="year-tab" data-year="1990">1990–1999</div>
+          <div class="year-tab" data-year="2000">2000–е</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Список выпускников -->
+    <div id="graduatesList">
+
+      <div class="graduate-card fade-in" data-name="александр николаевич крылов" data-year="1950">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Крылов Александр Николаевич</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1950 год · Инженер-кораблестроитель</div>
+          <p>Доктор технических наук, профессор. Руководил проектированием серии военных кораблей, внёс значительный вклад в теорию прочности корабельных конструкций.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="сергей павлович волков" data-year="1960">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Волков Сергей Павлович</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1963 год · Конструктор подводных лодок</div>
+          <p>Главный конструктор серии атомных подводных лодок. Лауреат Государственной премии СССР. Под его руководством созданы субмарины, составившие основу советского подводного флота.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="иван дмитриевич морозов" data-year="1940">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Морозов Иван Дмитриевич</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1941 год · Адмирал, инженер-кораблестроитель</div>
+          <p>Герой Советского Союза. В годы Великой Отечественной войны обеспечивал ремонт и восстановление боевых кораблей Балтийского флота в условиях блокады Ленинграда.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="нина алексеевна белова" data-year="1970">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Белова Нина Алексеевна</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1972 год · Учёный-гидродинамик</div>
+          <p>Доктор физико-математических наук, чл.-корр. РАН. Разработала новые методы расчёта гидродинамических характеристик подводных аппаратов. Автор более 200 научных работ.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="виктор иванович громов" data-year="1980">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Громов Виктор Иванович</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1985 год · Директор судостроительного предприятия</div>
+          <p>Руководитель одного из крупнейших судостроительных заводов России. При его руководстве предприятие освоило производство современных морских буровых платформ.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="алексей петрович синицын" data-year="1930">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Синицын Алексей Петрович</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1935 год · Первый директор ЛКИ</div>
+          <p>Один из основателей Ленинградского кораблестроительного института. Под его руководством были созданы первые учебные программы и лаборатории.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="михаил сергеевич кудрявцев" data-year="1960">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Кудрявцев Михаил Сергеевич</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1968 год · Создатель атомного ледокола «Арктика»</div>
+          <p>Лауреат Ленинской премии. Руководил проектированием атомного ледокола «Арктика», который в 1977 году первым в истории достиг Северного полюса в надводном плавании.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="ольга николаевна романова" data-year="1990">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Романова Ольга Николаевна</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1994 год · Главный инженер верфи</div>
+          <p>Первая женщина — главный инженер крупного судостроительного предприятия России. Под её руководством внедрены передовые цифровые технологии проектирования.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="андрей владимирович козлов" data-year="2000">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Козлов Андрей Владимирович</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 2005 год · Конструктор морских роботов</div>
+          <p>Основатель инновационной компании в области морской робототехники. Его разработки используются в системах подводного мониторинга и поиска.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="николай александрович захаров" data-year="1950">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Захаров Николай Александрович</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1955 год · Академик РАН</div>
+          <p>Выдающийся учёный в области теории корабля. Создал фундаментальную научную школу гидромеханики. Подготовил более 50 кандидатов и докторов наук.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="павел григорьевич соколов" data-year="1970">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Соколов Павел Григорьевич</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1978 год · Вице-адмирал</div>
+          <p>Командующий Балтийским флотом. Инженер-кораблестроитель по образованию, совмещал военную службу с научной деятельностью. Автор ряда публикаций по тактике морского боя.</p>
+        </div>
+      </div>
+
+      <div class="graduate-card fade-in" data-name="елена борисовна тихонова" data-year="1980">
+        <div class="graduate-avatar"><i class="bi bi-person"></i></div>
+        <div class="graduate-info">
+          <h5>Тихонова Елена Борисовна</h5>
+          <div class="graduate-year"><i class="bi bi-calendar me-1"></i>Выпуск: 1989 год · Ректор СПбГМТУ</div>
+          <p>Профессор, доктор технических наук. Ректор СПбГМТУ с 2018 года. Под её руководством университет вошёл в число ведущих технических вузов России.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Сообщение если нет результатов -->
+    <div id="noResults" class="text-center py-5" style="display:none;">
+      <i class="bi bi-search" style="font-size:48px;color:var(--text-muted);"></i>
+      <h5 class="mt-3" style="color:var(--text-muted);">Ничего не найдено</h5>
+      <p style="color:var(--text-muted);">Попробуйте изменить запрос или выбрать другой период</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section section-py-sm">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 fade-in">
+        <h3 class="section-title section-title-white mb-3">Вы — выпускник СПбГМТУ?</h3>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:24px;">Свяжитесь с нами, чтобы добавить информацию о себе в базу данных выпускников</p>
+        <a href="contacts.html" class="btn-museum"><i class="bi bi-envelope"></i> Написать нам</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <div class="brand-logo">⚓</div>
+          <p>Музей истории кораблестроения и мореплавания Санкт-Петербургского государственного морского технического университета</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <p class="footer-title">О музее</p>
+        <ul class="footer-links">
+          <li><a href="about.html#history"><i class="bi bi-chevron-right"></i>История музея</a></li>
+          <li><a href="about.html#documents"><i class="bi bi-chevron-right"></i>Документы</a></li>
+          <li><a href="about.html#administration"><i class="bi bi-chevron-right"></i>Администрация</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <p class="footer-title">Разделы</p>
+        <ul class="footer-links">
+          <li><a href="exposition.html"><i class="bi bi-chevron-right"></i>Экспозиция</a></li>
+          <li><a href="graduates.html"><i class="bi bi-chevron-right"></i>Выпускники</a></li>
+          <li><a href="gallery.html"><i class="bi bi-chevron-right"></i>Фотогалерея</a></li>
+          <li><a href="visitors.html"><i class="bi bi-chevron-right"></i>Посетителям</a></li>
+          <li><a href="contacts.html"><i class="bi bi-chevron-right"></i>Контакты</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <p class="footer-title">Контакты</p>
+        <div class="footer-contacts">
+          <p><i class="bi bi-geo-alt-fill"></i>190121, г. Санкт-Петербург,<br>ул. Лоцманская, д. 3</p>
+          <p><i class="bi bi-telephone-fill"></i><a href="tel:+78121234567">+7 (812) 123-45-67</a></p>
+          <p><i class="bi bi-envelope-fill"></i><a href="mailto:museum@smtu.ru">museum@smtu.ru</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span>© 2024 Музей СПбГМТУ. Все права защищены.</span>
+        <div class="d-flex gap-3">
+          <a href="text-page.html#privacy">Политика конфиденциальности</a>
+          <a href="text-page.html#agreement">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Дополнительная логика для показа "нет результатов"
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('graduateSearch');
+  const yearTabs = document.querySelectorAll('.year-tab');
+
+  function checkEmpty() {
+    const visible = [...document.querySelectorAll('.graduate-card')].filter(c => c.style.display !== 'none').length;
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  if (searchInput) searchInput.addEventListener('input', () => setTimeout(checkEmpty, 50));
+  yearTabs.forEach(t => t.addEventListener('click', () => setTimeout(checkEmpty, 50)));
+});
+</script>
+</body>
+</html>

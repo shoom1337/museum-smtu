@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О музее | Музей СПбГМТУ</title>
+  <meta name="description" content="История музея СПбГМТУ, нормативные документы, администрация и руководство.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-4">
+          <span><i class="bi bi-clock"></i>Пн–Пт: 10:00–17:00, Сб: 11:00–15:00</span>
+          <span><i class="bi bi-geo-alt"></i>г. Санкт-Петербург, ул. Лоцманская, 3</span>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="tel:+78121234567"><i class="bi bi-telephone"></i>+7 (812) 123-45-67</a>
+          <a href="mailto:museum@smtu.ru"><i class="bi bi-envelope"></i>museum@smtu.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-logo">⚓</div>
+        <div class="brand-text">
+          <span class="brand-name">Музей СПбГМТУ</span>
+          <span class="brand-sub">История кораблестроения</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="about.html" data-bs-toggle="dropdown">О музее</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#history"><i class="bi bi-journal-text me-2"></i>История музея</a></li>
+              <li><a class="dropdown-item" href="#documents"><i class="bi bi-file-earmark-text me-2"></i>Нормативные документы</a></li>
+              <li><a class="dropdown-item" href="#administration"><i class="bi bi-people me-2"></i>Администрация</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="visitors.html" data-bs-toggle="dropdown">Посетителям</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="visit-rules.html">Правила посещения</a></li>
+              <li><a class="dropdown-item" href="visitors.html#tour">Виртуальный тур</a></li>
+              <li><a class="dropdown-item" href="visitors.html#lectures">Лекторий</a></li>
+              <li><a class="dropdown-item" href="visitors.html#services">Дополнительные услуги</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="exposition.html" data-bs-toggle="dropdown">Экспозиция</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="exposition.html#shipbuilding">История кораблестроения</a></li>
+              <li><a class="dropdown-item" href="lki-history.html">История создания ЛКИ</a></li>
+              <li><a class="dropdown-item" href="exposition.html#underwater">Подводное оборудование</a></li>
+              <li><a class="dropdown-item" href="exposition.html#war">Годы войны</a></li>
+              <li><a class="dropdown-item" href="exposition.html#office">Кабинет профессора</a></li>
+              <li><a class="dropdown-item" href="exposition.html#diploma">Дипломный зал</a></li>
+              <li><a class="dropdown-item" href="graduates.html">Выдающиеся выпускники</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="graduates.html">Выпускники</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Фотогалерея</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>О музее</h1>
+    <p>История, миссия и коллектив музея истории кораблестроения и мореплавания СПбГМТУ</p>
+  </div>
+</section>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb-wrap">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active">О музее</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Навигация по разделам -->
+<div class="bg-light-museum border-bottom">
+  <div class="container">
+    <div class="d-flex gap-0 overflow-auto" style="border-bottom:none;">
+      <a href="#history" class="py-3 px-4 text-decoration-none fw-600 border-end" style="font-size:14px;color:var(--navy);font-weight:600;white-space:nowrap;">
+        <i class="bi bi-journal-text me-2"></i>История музея
+      </a>
+      <a href="#documents" class="py-3 px-4 text-decoration-none fw-600 border-end" style="font-size:14px;color:var(--text-muted);font-weight:600;white-space:nowrap;">
+        <i class="bi bi-file-earmark-text me-2"></i>Нормативные документы
+      </a>
+      <a href="#administration" class="py-3 px-4 text-decoration-none fw-600" style="font-size:14px;color:var(--text-muted);font-weight:600;white-space:nowrap;">
+        <i class="bi bi-people me-2"></i>Администрация
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ ИСТОРИЯ МУЗЕЯ ═══ -->
+<section class="section-py anchor-offset" id="history">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-7 fade-in">
+        <span class="section-label">История</span>
+        <h2 class="section-title">История музея</h2>
+        <div class="section-divider"></div>
+        <p>Музей истории кораблестроения и мореплавания был основан в 1941 году при Ленинградском кораблестроительном институте (ныне — Санкт-Петербургский государственный морской технический университет). Его создание стало ответом на потребность сохранить богатейшее наследие отечественного кораблестроения.</p>
+        <p>За годы своего существования музей превратился в один из крупнейших технических музеев Санкт-Петербурга, располагающий уникальной коллекцией экспонатов, охватывающих несколько столетий истории российского флота и морской инженерной мысли.</p>
+        <p>Сегодня в фондах музея насчитывается более 3000 единиц хранения: модели судов, навигационные приборы, научные инструменты, архивные документы, фотографии, личные вещи выдающихся учёных-кораблестроителей.</p>
+      </div>
+
+      <div class="col-lg-5 fade-in">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1899</div>
+            <div class="timeline-text">Основание Санкт-Петербургского политехнического института, на базе которого впоследствии сформируется морская школа</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1902</div>
+            <div class="timeline-text">Открытие кораблестроительного отделения — начало формирования специализированной технической школы</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1930</div>
+            <div class="timeline-text">Создание Ленинградского кораблестроительного института (ЛКИ) как самостоятельного учебного заведения</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1941</div>
+            <div class="timeline-text">Основание музея при ЛКИ. Формирование первых фондовых коллекций</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1965</div>
+            <div class="timeline-text">Открытие постоянной экспозиции. Музей принимает первых организованных посетителей</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1992</div>
+            <div class="timeline-text">Переименование в Санкт-Петербургский государственный морской технический университет</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-text">Масштабная реэкспозиция: обновление семи залов, пополнение фондов новыми экспонатами</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-text">Запуск нового сайта и цифровых сервисов музея</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ НОРМАТИВНЫЕ ДОКУМЕНТЫ ═══ -->
+<section class="section-py bg-light-museum anchor-offset" id="documents">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Документы</span>
+      <h2 class="section-title">Нормативные документы</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-lg-6 fade-in">
+        <div class="doc-item">
+          <i class="bi bi-file-earmark-pdf doc-icon" style="color:#c0392b;"></i>
+          <div class="doc-info">
+            <h6>Устав музея СПбГМТУ</h6>
+            <small>PDF, 0.8 МБ · Обновлён: 15.03.2024</small>
+          </div>
+          <a href="#" class="doc-download" aria-label="Скачать"><i class="bi bi-download"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="doc-item">
+          <i class="bi bi-file-earmark-pdf doc-icon" style="color:#c0392b;"></i>
+          <div class="doc-info">
+            <h6>Положение о музее</h6>
+            <small>PDF, 0.5 МБ · Обновлён: 10.01.2024</small>
+          </div>
+          <a href="#" class="doc-download" aria-label="Скачать"><i class="bi bi-download"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="doc-item">
+          <i class="bi bi-file-earmark-word doc-icon" style="color:#2980b9;"></i>
+          <div class="doc-info">
+            <h6>Правила внутреннего распорядка</h6>
+            <small>DOCX, 0.2 МБ · Обновлён: 01.09.2023</small>
+          </div>
+          <a href="#" class="doc-download" aria-label="Скачать"><i class="bi bi-download"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="doc-item">
+          <i class="bi bi-file-earmark-pdf doc-icon" style="color:#c0392b;"></i>
+          <div class="doc-info">
+            <h6>Политика обработки персональных данных</h6>
+            <small>PDF, 0.3 МБ · Обновлён: 12.11.2023</small>
+          </div>
+          <a href="#" class="doc-download" aria-label="Скачать"><i class="bi bi-download"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="doc-item">
+          <i class="bi bi-file-earmark-pdf doc-icon" style="color:#c0392b;"></i>
+          <div class="doc-info">
+            <h6>Лицензия на образовательную деятельность</h6>
+            <small>PDF, 1.2 МБ · Обновлён: 30.06.2023</small>
+          </div>
+          <a href="#" class="doc-download" aria-label="Скачать"><i class="bi bi-download"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="doc-item">
+          <i class="bi bi-file-earmark-text doc-icon" style="color:#27ae60;"></i>
+          <div class="doc-info">
+            <h6>Программа развития музея 2024–2027</h6>
+            <small>PDF, 1.5 МБ · Обновлён: 25.01.2024</small>
+          </div>
+          <a href="#" class="doc-download" aria-label="Скачать"><i class="bi bi-download"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ АДМИНИСТРАЦИЯ ═══ -->
+<section class="section-py anchor-offset" id="administration">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <span class="section-label">Команда</span>
+      <h2 class="section-title">Администрация музея</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="person-card">
+          <div class="person-photo"><i class="bi bi-person"></i></div>
+          <h5>Иванов Александр Петрович</h5>
+          <span class="role">Директор музея</span>
+          <div class="contacts">
+            <div><i class="bi bi-envelope me-1" style="color:var(--gold)"></i><a href="mailto:ivanov@smtu.ru">ivanov@smtu.ru</a></div>
+            <div><i class="bi bi-telephone me-1" style="color:var(--gold)"></i>+7 (812) 123-45-68</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="person-card">
+          <div class="person-photo"><i class="bi bi-person"></i></div>
+          <h5>Морозова Елена Викторовна</h5>
+          <span class="role">Заместитель директора по науке</span>
+          <div class="contacts">
+            <div><i class="bi bi-envelope me-1" style="color:var(--gold)"></i><a href="mailto:morozova@smtu.ru">morozova@smtu.ru</a></div>
+            <div><i class="bi bi-telephone me-1" style="color:var(--gold)"></i>+7 (812) 123-45-69</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="person-card">
+          <div class="person-photo"><i class="bi bi-person"></i></div>
+          <h5>Петров Сергей Николаевич</h5>
+          <span class="role">Главный хранитель фондов</span>
+          <div class="contacts">
+            <div><i class="bi bi-envelope me-1" style="color:var(--gold)"></i><a href="mailto:petrov@smtu.ru">petrov@smtu.ru</a></div>
+            <div><i class="bi bi-telephone me-1" style="color:var(--gold)"></i>+7 (812) 123-45-70</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="person-card">
+          <div class="person-photo"><i class="bi bi-person"></i></div>
+          <h5>Кузнецова Ирина Андреевна</h5>
+          <span class="role">Старший научный сотрудник</span>
+          <div class="contacts">
+            <div><i class="bi bi-envelope me-1" style="color:var(--gold)"></i><a href="mailto:kuznetsova@smtu.ru">kuznetsova@smtu.ru</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <div class="person-card">
+          <div class="person-photo"><i class="bi bi-person"></i></div>
+          <h5>Смирнов Денис Олегович</h5>
+          <span class="role">Экскурсовод-методист</span>
+          <div class="contacts">
+            <div><i class="bi bi-envelope me-1" style="color:var(--gold)"></i><a href="mailto:smirnov@smtu.ru">smirnov@smtu.ru</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <div class="brand-logo">⚓</div>
+          <p>Музей истории кораблестроения и мореплавания Санкт-Петербургского государственного морского технического университета</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <p class="footer-title">О музее</p>
+        <ul class="footer-links">
+          <li><a href="#history"><i class="bi bi-chevron-right"></i>История музея</a></li>
+          <li><a href="#documents"><i class="bi bi-chevron-right"></i>Документы</a></li>
+          <li><a href="#administration"><i class="bi bi-chevron-right"></i>Администрация</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <p class="footer-title">Разделы</p>
+        <ul class="footer-links">
+          <li><a href="exposition.html"><i class="bi bi-chevron-right"></i>Экспозиция</a></li>
+          <li><a href="graduates.html"><i class="bi bi-chevron-right"></i>Выпускники</a></li>
+          <li><a href="gallery.html"><i class="bi bi-chevron-right"></i>Фотогалерея</a></li>
+          <li><a href="visitors.html"><i class="bi bi-chevron-right"></i>Посетителям</a></li>
+          <li><a href="contacts.html"><i class="bi bi-chevron-right"></i>Контакты</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <p class="footer-title">Контакты</p>
+        <div class="footer-contacts">
+          <p><i class="bi bi-geo-alt-fill"></i>190121, г. Санкт-Петербург,<br>ул. Лоцманская, д. 3</p>
+          <p><i class="bi bi-telephone-fill"></i><a href="tel:+78121234567">+7 (812) 123-45-67</a></p>
+          <p><i class="bi bi-envelope-fill"></i><a href="mailto:museum@smtu.ru">museum@smtu.ru</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span>© 2024 Музей СПбГМТУ. Все права защищены.</span>
+        <div class="d-flex gap-3">
+          <a href="text-page.html#privacy">Политика конфиденциальности</a>
+          <a href="text-page.html#agreement">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
