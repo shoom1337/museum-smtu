@@ -10,8 +10,8 @@ museum_breadcrumbs(['О музее' => null]);
 <!-- Page Hero -->
 <div class="page-hero">
   <div class="container">
-    <h1>О музее</h1>
-    <p>История, документы и администрация Музея СПбГМТУ</p>
+    <h1><?php echo museum_opt('page_about_h1', 'О музее'); ?></h1>
+    <p><?php echo museum_opt('page_about_sub', 'История, документы и администрация Музея СПбГМТУ'); ?></p>
   </div>
 </div>
 

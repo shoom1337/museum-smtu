@@ -9,8 +9,8 @@ museum_breadcrumbs(['Экспозиция' => null]);
 
 <div class="page-hero">
   <div class="container">
-    <h1>Экспозиция</h1>
-    <p>Семь тематических залов, охватывающих всю историю отечественного кораблестроения</p>
+    <h1><?php echo museum_opt('page_exposition_h1', 'Экспозиция'); ?></h1>
+    <p><?php echo museum_opt('page_exposition_sub', 'Семь тематических залов, охватывающих всю историю отечественного кораблестроения'); ?></p>
   </div>
 </div>
 

@@ -290,40 +290,103 @@ function museum_settings_page_html() {
     if (isset($_POST['museum_opts_nonce']) &&
         wp_verify_nonce($_POST['museum_opts_nonce'], 'museum_save_opts')) {
 
-        $fields = ['phone', 'email', 'address', 'hours_weekday', 'hours_saturday', 'yandex_map_src'];
+        $text_fields = [
+            'phone', 'email', 'address', 'hours_weekday', 'hours_saturday', 'yandex_map_src',
+            'hero_badge',
+            'page_about_h1',       'page_about_sub',
+            'page_visitors_h1',    'page_visitors_sub',
+            'page_exposition_h1',  'page_exposition_sub',
+            'page_contacts_h1',    'page_contacts_sub',
+            'page_visit_rules_h1', 'page_visit_rules_sub',
+            'page_lki_h1',         'page_lki_sub',
+            'page_gallery_h1',     'page_gallery_sub',
+            'page_graduates_h1',   'page_graduates_sub',
+        ];
+        $textarea_fields = ['hero_description', 'about_title', 'about_text1', 'about_text2'];
+
         $opts = [];
-        foreach ($fields as $f) {
+        foreach ($text_fields as $f) {
             $opts[$f] = isset($_POST[$f]) ? sanitize_text_field($_POST[$f]) : '';
+        }
+        foreach ($textarea_fields as $f) {
+            $opts[$f] = isset($_POST[$f]) ? sanitize_textarea_field($_POST[$f]) : '';
         }
         update_option('museum_options', $opts);
         echo '<div class="notice notice-success"><p>Настройки сохранены.</p></div>';
     }
 
-    $o = get_option('museum_options', []);
-    $g = function($k, $d) use ($o) { return isset($o[$k]) && $o[$k] !== '' ? $o[$k] : $d; };
+    $o  = get_option('museum_options', []);
+    $g  = function($k, $d) use ($o) { return isset($o[$k]) && $o[$k] !== '' ? esc_attr($o[$k])     : esc_attr($d); };
+    $gt = function($k, $d) use ($o) { return isset($o[$k]) && $o[$k] !== '' ? esc_textarea($o[$k]) : esc_textarea($d); };
     ?>
     <div class="wrap">
         <h1>Настройки музея СПбГМТУ</h1>
         <form method="post">
             <?php wp_nonce_field('museum_save_opts', 'museum_opts_nonce'); ?>
+
+            <h2 class="title">Контактная информация</h2>
             <table class="form-table">
                 <tr><th>Телефон</th>
-                    <td><input type="text" name="phone" value="<?php echo esc_attr($g('phone', '+7 (812) 123-45-67')); ?>" class="regular-text"></td></tr>
+                    <td><input type="text" name="phone" value="<?php echo $g('phone', '+7 (812) 123-45-67'); ?>" class="regular-text"></td></tr>
                 <tr><th>Email</th>
-                    <td><input type="email" name="email" value="<?php echo esc_attr($g('email', 'museum@smtu.ru')); ?>" class="regular-text"></td></tr>
+                    <td><input type="email" name="email" value="<?php echo $g('email', 'museum@smtu.ru'); ?>" class="regular-text"></td></tr>
                 <tr><th>Адрес</th>
-                    <td><input type="text" name="address" value="<?php echo esc_attr($g('address', 'ул. Лоцманская, 3, Санкт-Петербург')); ?>" class="regular-text"></td></tr>
+                    <td><input type="text" name="address" value="<?php echo $g('address', 'ул. Лоцманская, 3, Санкт-Петербург'); ?>" class="regular-text"></td></tr>
                 <tr><th>Часы работы Пн–Пт</th>
-                    <td><input type="text" name="hours_weekday" value="<?php echo esc_attr($g('hours_weekday', '10:00–17:00')); ?>" class="regular-text"></td></tr>
+                    <td><input type="text" name="hours_weekday" value="<?php echo $g('hours_weekday', '10:00–17:00'); ?>" class="regular-text"></td></tr>
                 <tr><th>Часы работы Суббота</th>
-                    <td><input type="text" name="hours_saturday" value="<?php echo esc_attr($g('hours_saturday', '11:00–15:00')); ?>" class="regular-text"></td></tr>
+                    <td><input type="text" name="hours_saturday" value="<?php echo $g('hours_saturday', '11:00–15:00'); ?>" class="regular-text"></td></tr>
                 <tr><th>Яндекс.Карта (src iframe)</th>
                     <td>
-                        <input type="text" name="yandex_map_src" value="<?php echo esc_attr($g('yandex_map_src', '')); ?>" class="large-text"
+                        <input type="text" name="yandex_map_src" value="<?php echo $g('yandex_map_src', ''); ?>" class="large-text"
                                placeholder="https://yandex.ru/map-widget/v1/?...">
                         <p class="description">Вставьте URL из кода iframe с Яндекс.Карт</p>
                     </td></tr>
             </table>
+
+            <h2 class="title">Главная страница</h2>
+            <table class="form-table">
+                <tr><th>Бейдж в шапке</th>
+                    <td><input type="text" name="hero_badge" value="<?php echo $g('hero_badge', 'Основан в 1941 году'); ?>" class="regular-text"></td></tr>
+                <tr><th>Описание (hero)</th>
+                    <td><textarea name="hero_description" class="large-text" rows="3"><?php echo $gt('hero_description', 'Уникальная коллекция, раскрывающая историю Санкт-Петербургского морского технического университета — одного из старейших технических вузов России.'); ?></textarea></td></tr>
+                <tr><th>Заголовок секции «О нас»</th>
+                    <td><textarea name="about_title" class="large-text" rows="2"><?php echo $gt('about_title', 'Хранители морской истории России'); ?></textarea></td></tr>
+                <tr><th>Первый абзац «О нас»</th>
+                    <td><textarea name="about_text1" class="large-text" rows="3"><?php echo $gt('about_text1', 'Музей СПбГМТУ — один из крупнейших технических музеев Санкт-Петербурга. Основанный более 80 лет назад, он бережно хранит историю отечественного кораблестроения, судьбы выпускников и традиции главного морского вуза страны.'); ?></textarea></td></tr>
+                <tr><th>Второй абзац «О нас»</th>
+                    <td><textarea name="about_text2" class="large-text" rows="3"><?php echo $gt('about_text2', 'В фондах музея — модели кораблей, навигационные приборы, архивные документы, личные вещи выдающихся учёных и конструкторов, уникальные фотографии и артефакты, связанные с историей российского флота.'); ?></textarea></td></tr>
+            </table>
+
+            <h2 class="title">Заголовки страниц</h2>
+            <p class="description" style="margin-bottom:12px">H1 и подзаголовок в верхней части каждой страницы.</p>
+            <table class="form-table">
+                <?php
+                $pages = [
+                    'about'       => ['О музее',              'История, документы и администрация Музея СПбГМТУ'],
+                    'visitors'    => ['Посетителям',           'Правила, часы работы, виртуальный тур, лекторий и дополнительные услуги'],
+                    'exposition'  => ['Экспозиция',            'Семь тематических залов, охватывающих всю историю отечественного кораблестроения'],
+                    'contacts'    => ['Контакты',              'Адрес, телефон, email и маршруты до музея'],
+                    'visit_rules' => ['Правила посещения',     'Условия посещения, режим работы и форма предварительной записи'],
+                    'lki'         => ['История создания ЛКИ',  'От инженерного факультета 1899 года до одного из ведущих технических вузов России'],
+                    'gallery'     => ['Фотогалерея',           'Фотографии экспонатов, залов музея, исторические снимки и архивные материалы'],
+                    'graduates'   => ['Выдающиеся выпускники', 'База данных известных выпускников СПбГМТУ — инженеры, учёные, адмиралы, конструкторы'],
+                ];
+                foreach ($pages as $slug => [$def_h1, $def_sub]) :
+                    $kh = "page_{$slug}_h1";
+                    $ks = "page_{$slug}_sub";
+                ?>
+                <tr>
+                    <th style="padding-bottom:4px">«<?php echo esc_html($def_h1); ?>» — H1</th>
+                    <td><input type="text" name="<?php echo $kh; ?>" value="<?php echo $g($kh, $def_h1); ?>" class="large-text"></td>
+                </tr>
+                <tr>
+                    <th style="padding-top:0;padding-bottom:16px;font-weight:400;color:#666">Подзаголовок</th>
+                    <td style="padding-top:4px"><input type="text" name="<?php echo $ks; ?>" value="<?php echo $g($ks, $def_sub); ?>" class="large-text"></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+
             <?php submit_button('Сохранить настройки'); ?>
         </form>
     </div>
@@ -333,11 +396,19 @@ function museum_settings_page_html() {
 // ─── 6. Хелпер-функции ───────────────────────────────────────────────────────
 
 /**
- * Получить настройку музея
+ * Получить настройку музея (с экранированием для вывода в HTML)
  */
 function museum_opt($key, $default = '') {
     $opts = get_option('museum_options', []);
     return (isset($opts[$key]) && $opts[$key] !== '') ? esc_html($opts[$key]) : $default;
+}
+
+/**
+ * Получить настройку музея без экранирования (для textarea-полей с nl2br)
+ */
+function museum_opt_raw($key, $default = '') {
+    $opts = get_option('museum_options', []);
+    return (isset($opts[$key]) && $opts[$key] !== '') ? $opts[$key] : $default;
 }
 
 /**

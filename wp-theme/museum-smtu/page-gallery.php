@@ -23,8 +23,8 @@ $has_cats = !is_wp_error($gallery_cats) && !empty($gallery_cats);
 
 <div class="page-hero">
   <div class="container">
-    <h1>Фотогалерея</h1>
-    <p>Фотографии экспонатов, залов музея, исторические снимки и архивные материалы</p>
+    <h1><?php echo museum_opt('page_gallery_h1', 'Фотогалерея'); ?></h1>
+    <p><?php echo museum_opt('page_gallery_sub', 'Фотографии экспонатов, залов музея, исторические снимки и архивные материалы'); ?></p>
   </div>
 </div>
 

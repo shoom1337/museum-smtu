@@ -9,8 +9,8 @@ museum_breadcrumbs(['Посетителям' => null]);
 
 <div class="page-hero">
   <div class="container">
-    <h1>Посетителям</h1>
-    <p>Правила, часы работы, виртуальный тур, лекторий и дополнительные услуги</p>
+    <h1><?php echo museum_opt('page_visitors_h1', 'Посетителям'); ?></h1>
+    <p><?php echo museum_opt('page_visitors_sub', 'Правила, часы работы, виртуальный тур, лекторий и дополнительные услуги'); ?></p>
   </div>
 </div>
 

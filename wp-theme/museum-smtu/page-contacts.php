@@ -10,8 +10,8 @@ $map_src = museum_opt('yandex_map_src', '');
 
 <div class="page-hero">
   <div class="container">
-    <h1>Контакты</h1>
-    <p>Адрес, телефон, email и маршруты до музея</p>
+    <h1><?php echo museum_opt('page_contacts_h1', 'Контакты'); ?></h1>
+    <p><?php echo museum_opt('page_contacts_sub', 'Адрес, телефон, email и маршруты до музея'); ?></p>
   </div>
 </div>
 
